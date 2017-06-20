@@ -1,12 +1,13 @@
 #! /bin/sh
-# appLariats generic tomcat build script
-# Requirements - A valid war file exists within the code_dir
-# Copies the war file from the code_dir and copies it into /usr/local/tomcat/webapps
+# appLariats generic golang build script
 
-#TO DO - Add an if to check for file and throw error if not present
+#Log everything in /src/build.log
+logfile=/src/build.log
+exec > $logfile 2>&1
+set -x
 
 mkdir -p /go/src/app
-cp -f $artifact_root/ /go/src/app
+cp -rf /src/* /go/src/app
 cd /go/src/app
 
 go-wrapper download
