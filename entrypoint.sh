@@ -4,4 +4,4 @@
 echo "Printing build log"
 cat /code/build.log
 
-exec @
+exec "$@"
