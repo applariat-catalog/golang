@@ -2,7 +2,7 @@
 # appLariats generic golang build script
 
 #Log everything in /code/build.log
-logfile=/code/build.log
+logfile=/tmp/build.log
 exec > $logfile 2>&1
 set -x
 
